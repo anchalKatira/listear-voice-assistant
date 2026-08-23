@@ -2,8 +2,6 @@
 
 A voice-controlled shopping list with smart suggestions. Static site, zero backend, zero build step — open `index.html` or deploy the folder as-is.
 
-**Live demo:** _(add your deployed URL here after publishing)_
-**Repo:** _(add your GitHub URL here)_
 
 # Try it
 
