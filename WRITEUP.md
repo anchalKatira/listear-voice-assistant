@@ -1,4 +1,4 @@
-## Approach (200 words)
+## Approach 
 
 I treated 8 hours as a real constraint and scoped down rather than shipping a shallow version of everything. The app is static and backend-free (`index.html` / `style.css` / `app.js`), needing zero infrastructure and deploying to GitHub Pages in minutes.
 
