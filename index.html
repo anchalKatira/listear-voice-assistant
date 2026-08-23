@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ListEar — Voice Shopping Assistant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">◆</span>
+      <span class="brand-name">ListEar</span>
+    </div>
+    <span class="tagline">say it, it's on the list</span>
+  </header>
+
+  <section class="voice-panel">
+    <button class="mic-btn" id="micBtn" aria-label="Start voice command">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+        <line x1="12" y1="19" x2="12" y2="23"/>
+        <line x1="8" y1="23" x2="16" y2="23"/>
+      </svg>
+    </button>
+    <div class="voice-feedback">
+      <div class="voice-state" id="voiceState">Tap to speak</div>
+      <div class="voice-transcript" id="voiceTranscript"></div>
+    </div>
+    <div class="loading-dots" id="loadingDots" aria-hidden="true"><span></span><span></span><span></span></div>
+  </section>
+
+  <form class="text-fallback" id="textForm">
+    <input type="text" id="textInput" placeholder='or type: "add 2 apples", "remove milk", "find toothpaste under $5"'>
+    <button type="submit">Go</button>
+  </form>
+
+  <section class="examples">
+    <span>Try:</span>
+    <button class="chip" data-cmd="I need milk">"I need milk"</button>
+    <button class="chip" data-cmd="add 3 bananas">"add 3 bananas"</button>
+    <button class="chip" data-cmd="remove bread">"remove bread"</button>
+    <button class="chip" data-cmd="find toothpaste under $5">"find toothpaste under $5"</button>
+  </section>
+
+  <section class="suggestions" id="suggestions"></section>
+
+  <section class="list-section">
+    <div class="list-head">
+      <h2>Your List</h2>
+      <span class="count" id="itemCount">0 items</span>
+    </div>
+    <div class="categories" id="categories"></div>
+    <div class="empty-state" id="emptyState">Your list is empty. Try saying "add milk".</div>
+  </section>
+
+  <div class="search-drawer" id="searchDrawer">
+    <div class="search-drawer-head">
+      <h3 id="searchTitle">Search results</h3>
+      <button id="closeSearch">✕</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
